@@ -117,17 +117,17 @@ void selectionSort(int* pData, int n)
 
     for (int i = 0; i < n-1; i++)
     {
-        int min_idx = i; //Keeps the current min index
+        int min = i; //Keeps the current min index
                             //To compare with i
         for (int j = i+1; j < n; j++) //Checks the curent min index
         { //Wiht I
-          if (pData[j] < pData[min_idx]){
-              min_idx = j;
+          if (pData[j] < pData[min]){
+              min = j;
           }
         }
-        if (min_idx!=i){ //If I is different it does swaps the values
-            int temp = pData[min_idx];
-            pData[min_idx] = pData[i];
+        if (min != i){ //If I is different it does swaps the values
+            int temp = pData[min];
+            pData[min] = pData[i];
             pData[i] = temp;
         }
 
